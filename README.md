@@ -106,7 +106,7 @@ To update the cost of a product send a PUT with the code, name and the new cost 
 }
 ```
 
-#### Delete an product
+#### Delete a product
 To delete an product send a DELETE with the code of the product as a param, or send:
 ```
 localhost:8086/CompraTEC/products?code=1
@@ -138,7 +138,7 @@ To insert an order in the data base send a POST with the following JSON:
 }
 ```
 
-#### Update a order
+#### Update an order
 To update a order send a PUT with the id name and the other attributes as follows:
 ```
 {
