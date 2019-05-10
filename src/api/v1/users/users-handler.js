@@ -3,7 +3,7 @@ import { request as sendRequest } from "graphql-request"
 const jwt = require("jsonwebtoken")
 
 //global variables
-const uri = "http://localhost:8080/graphql"
+const uri = "http://phpdocker:8080/graphql"
 
 export const GetUsers = function(request, response) {
     let query = ""
