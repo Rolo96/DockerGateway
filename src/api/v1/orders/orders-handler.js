@@ -2,7 +2,7 @@
 import { request as sendRequest } from "graphql-request"
 
 //global variables
-const uri = "http://localhost:8000/graphql"
+const uri = "nodedocker:8000/graphql"
 
 export const GetOrders = function(request, response) {
     let query = ""

@@ -2,7 +2,7 @@
 import { request as sendRequest } from "graphql-request"
 
 //global variables
-const uri = "http://localhost:5000/graphql"
+const uri = "pythondocker:5000/graphql"
 
 export const GetProducts = function(request, response) {
     let query = ""
