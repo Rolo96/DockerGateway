@@ -3,7 +3,7 @@ import { request as sendRequest } from "graphql-request"
 const jwt = require("jsonwebtoken")
 
 //global variables
-const uri = "http://phpdocker:8080/graphql"
+const uri = "http://localhost:8080/graphql"
 
 export const GetUsers = function(request, response) {
     let query = ""
@@ -41,9 +41,10 @@ export const CreateUser = function(request, response) {
 }
 
 export const UpdateUser = function(request, response) {
-    const { name, code } = request.payload
-    const product = `{name:"${name}",code:${code}`
-    let query = `mutation{ UpdateUser(user: ${product}){ status info}}`
+    const { id, firstname, lastname, password } = request.payload
+    const user = `{id:${id},firstname:"${firstname}",lastname:"${lastname}", 
+    password:"${password}"}`
+    let query = `mutation{ UpdateUser(user: ${user}){ status info}}`
     return sendRequest(uri, query)
         .then(result => {
             if (result.UpdateUser.status != 0) {
