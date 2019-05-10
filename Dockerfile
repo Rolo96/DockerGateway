@@ -17,4 +17,4 @@ COPY . .
 
 
 EXPOSE 8086
-CMD sleep infinity
+CMD [ "npm", "start" ]
