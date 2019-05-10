@@ -46,10 +46,10 @@ localhost:8086/CompraTEC/users?id=1
 To insert an user in the data base send a POST with the following JSON:
 ```
 {
-	"id": 1,
+  "id": 1,
   "firstname": "A",
   "lastname": "B",
-	"password": "123"
+  "password": "123"
 }
 ```
 Remember the id of the users is unique, it will be a conflict if a duplicated id is sent. The API will response with the result of the post.
@@ -61,7 +61,7 @@ To update an user send a PUT with the id of the user and the other three attribu
   "id": 1,
   "firstname": "A",
   "lastname": "B",
-	"password": "123"
+  "password": "123"
 }
 ```
 The firstname, lastname and password will be updated with the new values. Remember send all the attributes when updating an user, otherwise, missing ones will be updated with a null value or the server will return a conflict.
@@ -89,10 +89,10 @@ localhost:8086/CompraTEC/products?code=1
 To insert an product in the data base send a POST with the following JSON:
 ```
 {
-	"code": 1,
+  "code": 1,
   "name": "A",
   "amount": 1,
-	"cost": 1
+  "cost": 1
 }
 ```
 
@@ -129,12 +129,12 @@ localhost:8086/CompraTEC/orders?code=1
 To insert an order in the data base send a POST with the following JSON:
 ```
 {
-	"userid": 1,
+  "userid": 1,
   "total": 1,
   "products": [
 	  {"id": 1, "amount": 1, "cost": 1},
-		{"id": 2, "amount": 2, "cost": 2}
-	]
+	  {"id": 2, "amount": 2, "cost": 2}
+  ]
 }
 ```
 
@@ -142,13 +142,13 @@ To insert an order in the data base send a POST with the following JSON:
 To update a order send a PUT with the id name and the other attributes as follows:
 ```
 {
-  "id": 1
-	"userid": 1,
+  "id": 1,
+  "userid": 1,
   "total": 1,
   "products": [
 	  {"id": 1, "amount": 1, "cost": 1},
-		{"id": 2, "amount": 2, "cost": 2}
-	]
+	  {"id": 2, "amount": 2, "cost": 2}
+  ]
 }
 ```
 
