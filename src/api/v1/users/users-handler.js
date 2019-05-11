@@ -82,7 +82,7 @@ export const Login = async function(request, response) {
         return response.response({ error: "Password incorrect" }).code(401)
     }
     let token = jwt.sign({ Id: id }, "compratec123", {
-        expiresIn: 60 * 60 * 24
+        expiresIn: 60 * 60 * 20
     })
     return { token }
 }
